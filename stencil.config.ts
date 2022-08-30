@@ -8,6 +8,11 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     {
+      type: 'dist-collection',
+      dir: 'dist',
+      collectionDir: './dist/collection'
+    },
+    {
       type: 'dist-custom-elements',
     },
     {
