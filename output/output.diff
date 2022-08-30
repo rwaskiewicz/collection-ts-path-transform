@@ -1,0 +1,139 @@
+diff --color -r output/default-config/dist/collection/components/my-component/my-component.js output/transform-aliased-import-paths-true/dist/collection/components/my-component/my-component.js
+1,2c1,2
+< import { Component, Prop, h } from '@stencil/core';
+< import { format } from '../../utils/utils';
+---
+> import { h } from "@stencil/core";
+> import { format } from "../../utils/utils";
+8,10c8
+<     return h("div", null,
+<       "Hello, World! I'm ",
+<       this.getText());
+---
+>     return h("div", null, "Hello, World! I'm ", this.getText());
+14,72c12,76
+<   static get originalStyleUrls() { return {
+<     "$": ["my-component.css"]
+<   }; }
+<   static get styleUrls() { return {
+<     "$": ["my-component.css"]
+<   }; }
+<   static get properties() { return {
+<     "first": {
+<       "type": "string",
+<       "mutable": false,
+<       "complexType": {
+<         "original": "string",
+<         "resolved": "string",
+<         "references": {}
+<       },
+<       "required": false,
+<       "optional": false,
+<       "docs": {
+<         "tags": [],
+<         "text": "The first name"
+<       },
+<       "attribute": "first",
+<       "reflect": false
+<     },
+<     "middle": {
+<       "type": "string",
+<       "mutable": false,
+<       "complexType": {
+<         "original": "string",
+<         "resolved": "string",
+<         "references": {}
+<       },
+<       "required": false,
+<       "optional": false,
+<       "docs": {
+<         "tags": [],
+<         "text": "The middle name"
+<       },
+<       "attribute": "middle",
+<       "reflect": false
+<     },
+<     "last": {
+<       "type": "string",
+<       "mutable": false,
+<       "complexType": {
+<         "original": "string",
+<         "resolved": "string",
+<         "references": {}
+<       },
+<       "required": false,
+<       "optional": false,
+<       "docs": {
+<         "tags": [],
+<         "text": "The last name"
+<       },
+<       "attribute": "last",
+<       "reflect": false
+<     }
+<   }; }
+---
+>   static get originalStyleUrls() {
+>     return {
+>       "$": ["my-component.css"]
+>     };
+>   }
+>   static get styleUrls() {
+>     return {
+>       "$": ["my-component.css"]
+>     };
+>   }
+>   static get properties() {
+>     return {
+>       "first": {
+>         "type": "string",
+>         "mutable": false,
+>         "complexType": {
+>           "original": "string",
+>           "resolved": "string",
+>           "references": {}
+>         },
+>         "required": false,
+>         "optional": false,
+>         "docs": {
+>           "tags": [],
+>           "text": "The first name"
+>         },
+>         "attribute": "first",
+>         "reflect": false
+>       },
+>       "middle": {
+>         "type": "string",
+>         "mutable": false,
+>         "complexType": {
+>           "original": "string",
+>           "resolved": "string",
+>           "references": {}
+>         },
+>         "required": false,
+>         "optional": false,
+>         "docs": {
+>           "tags": [],
+>           "text": "The middle name"
+>         },
+>         "attribute": "middle",
+>         "reflect": false
+>       },
+>       "last": {
+>         "type": "string",
+>         "mutable": false,
+>         "complexType": {
+>           "original": "string",
+>           "resolved": "string",
+>           "references": {}
+>         },
+>         "required": false,
+>         "optional": false,
+>         "docs": {
+>           "tags": [],
+>           "text": "The last name"
+>         },
+>         "attribute": "last",
+>         "reflect": false
+>       }
+>     };
+>   }
